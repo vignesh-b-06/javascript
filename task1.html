@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+
+<body>
+
+<h2 id="title">Title</h2>
+<p id="para"> paragraph text</p>
+
+<button onclick="changeText()">Change</button>
+
+<script>
+function changeText() {
+    // 1. Change text using getElementById
+    document.getElementById("title").innerText = "New Title";
+
+    // 2. Change style
+    document.getElementById("title").style.backgroundColor = "yellow";
+
+    // 3. Change paragraph content
+    document.getElementById("para").innerText = "Paragraph changed!";
+
+    // 4. Change color and font size
+    document.getElementById("para").style.color = "blue";
+    document.getElementById("para").style.fontSize = "20px";
+}
+</script>
+
+</body>
+</html>
