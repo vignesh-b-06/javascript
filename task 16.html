@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="saveData()">Save</button>
+<button onclick="getData()">Get</button>
+
+<script>
+function saveData() {
+    localStorage.setItem("college", "Engineering College");
+}
+
+function getData() {
+    let data = localStorage.getItem("college");
+    console.log(data);
+}
+</script>
+
+</body>
+</html>

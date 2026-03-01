@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="saveSession()">Save Session</button>
+<button onclick="getSession()">Get Session</button>
+
+<script>
+function saveSession() {
+    sessionStorage.setItem("course", "Cyber Security");
+}
+
+function getSession() {
+    let data = sessionStorage.getItem("course");
+    console.log(data);
+}
+</script>
+
+</body>
+</html>
