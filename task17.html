@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: white;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<h2>Employee Details</h2>
+
+<input type="text" id="name" placeholder="Enter Name">
+<input type="number" id="age" placeholder="Enter Age">
+
+<select id="designation">
+    <option>Developer</option>
+    <option>Tester</option>
+    <option>Manager</option>
+    <option>HR</option>
+</select>
+
+<button onclick="addEmployee()">Submit</button>
+
+<ul id="list"></ul>
+
+<script>
+    function addEmployee() {
+
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        var designation = document.getElementById("designation").value;
+
+        var li = document.createElement("li");
+        li.innerHTML = name + " - " + age + " - " + designation;
+
+        document.getElementById("list").appendChild(li);
+
+        document.getElementById("name").value = "";
+        document.getElementById("age").value = "";
+    }
+</script>
+
+</body>
+</html>
